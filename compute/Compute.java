@@ -36,4 +36,22 @@ import java.rmi.RemoteException;
 
 public interface Compute extends Remote {
     <T> T executeTask(Task<T> t) throws RemoteException;
+
+    //1- listar todos os títulos dos filmes e o ano de lançamento
+    String list_filme();
+    //2- listar todos os títulos dos filmes e o ano de lançamento de um gênero determinado
+    String list_film_by_genre(char *genre, char *buf);
+    // 3- listar todas as informações de todos os filmes;
+    int list_all_film_info(char *buf);
+    //4- dado o identificador de um filme, retornar a sinopse do filme;
+    int film_plot_by_id(char *c, char *buf);
+    //5- dado o identificador de um filme, retornar todas as informações deste filme;
+    int info_film_by_id(char *c, char *buf);
+    //6 - Mostra Num exemplares disponiveis para cada filme
+    void count_copies(char *buf);
+    //8 - Remove Filme
+    void remove_movie_with_id(char *id, char *buf) {
+
+
+
 }
